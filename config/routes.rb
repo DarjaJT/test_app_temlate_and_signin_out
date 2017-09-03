@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'users/new'
+
+  root  'static_pages#home'
+  match '/test',    to: 'static_pages#test',    via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
+
 end
